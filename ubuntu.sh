@@ -6,22 +6,22 @@ echo1=#########################################################################
 echo2=#########################################################################
 
 echo -e "\n$echo1\nRemovendo travas eventuais do apt.\n$echo2\n"
-
-echo -e "\n$echo1\nAtualizando Sistema.\n$echo2\n"
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 set -e  ;
+
+echo -e "\n$echo1\nAtualizando Sistema.\n$echo2\n"
 sudo apt update --fix-missing ;
 sudo apt full-upgrade -y  ;
 
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo2\n"
-pacotes_dep=(curl wget  sed jq unzip chrome-gnome-shell gnome-tweak-tool git snapd)
-pacotes_apt=(gimp vlc libreoffice netbeans qbittorrent enpass steam insync gnome-boxes timeshift openjdk-8-jdk-headless gparted)
+pacotes_dep=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
+pacotes_apt=(gimp vlc libreoffice netbeans qbittorrent enpass stacer steam insync gnome-boxes timeshift openjdk-8-jdk-headless gparted)
 pacotes_apt_recomendados=( wine-stable wine32 winetricks)
 
 ppas=()
 
-##ADICIONAR NUMERO REFERENTE AO PROJETO
+##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
 ext=(19 1217 104 1677 7 1160 906)
 
 repos=(
@@ -33,6 +33,7 @@ deb=("https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86_64.AppImage"
 "https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-ia32.AppImage"
+"https://github.com/kefir500/apk-editor-studio/releases/download/v1.4.0/apk-editor-studio_linux_1.4.0.AppImage"
 )
 
 down_keys=(
@@ -51,7 +52,6 @@ libs_32bits=(gnutls30 ldap-2.4-2 gpg-error0 xml2 asound2-plugins sdl2-2.0-0 free
 ###################################################################################
 echo -e "\n$echo1\nInstalando extenções GNOME.\n$echo2\n"
 sudo apt -y install wget curl jq unzip sed
-echo -e "\n$echo1\nNOTA = OS LINKS DAS EXTENÇOES DEVEM ESTAR EM UM ARQUIVO COM NOME 'links'."
 rm -f ./install-gnome-extensions.sh; wget -N -q "https://raw.githubusercontent.com/cyfrost/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh && chmod +x install-gnome-extensions.sh
 ./install-gnome-extensions.sh --enable ${ext[@]}
 rm -f ./install-gnome-extensions.sh
@@ -123,8 +123,3 @@ clear
 echo -e "\n$echo1\nSISTEMA INSTALADO COM SUCESSO!!\n$echo2\n"
 sleep 120
 exit
-exit
-
-
-
-
