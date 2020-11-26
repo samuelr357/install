@@ -117,7 +117,9 @@ chmod +x *.AppImage
 
 ##CONFIGURAR VPN PARA INICIAR COM SISTEMA
 echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo2\n"
-sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop
+sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop > /usr/share/applications/nm-connection-editor1.desktop
+sudo rm /usr/share/applications/nm-connection-editor.desktop
+vm /usr/share/applications/nm-connection-editor1.desktop /usr/share/applications/nm-connection-editor.desktop
 
 apt dist-upgrade -y
 apt autoclean 
