@@ -1,5 +1,5 @@
 #!/bin/bash
-##BASED https://plus.diolinux.com.br/t/tutorial-faca-seu-proprio-script-de-pos-instalacao/10021
+##CRIADO POR SAMUEL RODRIGUES##
 ##PARA NOTEBOOK LNV SETAR NA INICIALIZAÇÃO 'amixer -c 1 sset 'Headphone' 100'.
 
 echo1=#########################################################################
@@ -115,6 +115,9 @@ wget "https://github.com/AppImage/appimaged/releases/download/continuous/appimag
 chmod +x *.AppImage
 ./appimaged-x86_64.AppImage --install
 
+##CONFIGURAR VPN PARA INICIAR COM SISTEMA
+echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo2\n"
+sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop
 
 apt dist-upgrade -y
 apt autoclean 
