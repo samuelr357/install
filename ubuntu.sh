@@ -22,7 +22,7 @@ pacotes_apt_recomendados=( wine-stable wine32 winetricks)
 ppas=()
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
-ext=(19 1217 104 1677 7 1160 906)
+ext=(19 1217 104 1677 7 906)
 
 repos=(
 "deb https://apt.enpass.io/ stable main"
@@ -34,6 +34,7 @@ deb=("https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86_64.AppImage"
 "https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-ia32.AppImage"
 "https://github.com/kefir500/apk-editor-studio/releases/download/v1.4.0/apk-editor-studio_linux_1.4.0.AppImage"
+"https://github.com/GitSquared/edex-ui/releases/download/v2.2.4/eDEX-UI-Linux-x86_64.AppImage"
 )
 
 down_keys=(
@@ -119,8 +120,8 @@ chmod +x *.AppImage
 echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo2\n"
 sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop > /home/samuel/.local/share/applications/nm-connection-editor.desktop 
 
-apt dist-upgrade -y
-apt autoclean 
+sudo apt dist-upgrade -y
+sudo apt autoclean 
 
 clear
 echo -e "\n$echo1\nSISTEMA INSTALADO COM SUCESSO!!\n$echo2\n"
