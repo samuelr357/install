@@ -22,7 +22,7 @@ pacotes_apt_recomendados=( wine-stable wine32 winetricks)
 ppas=()
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
-ext=(19 1217 104 1677 7 906)
+ext=(19 1160 104 1677 7 906)
 
 repos=(
 "deb https://apt.enpass.io/ stable main"
@@ -71,6 +71,9 @@ wget -nv -c ${down_keys[@]}
 sudo apt-key add ${keys[@]}
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
 
+echo -e "\n$echo1\nInsalando pacotes DEB externos.\n$echo2\n"
+sudo apt install ./*.deb
+
 echo -e "\n$echo1\nAdicionando arquitetura x86.\n$echo2\n"
 sudo dpkg --add-architecture i386 
 sudo apt update --fix-missing
@@ -98,9 +101,6 @@ sudo apt install --install-recommends  ${pacotes_apt_recomendados[@]} -y
 echo -e "\n$echo1\nInstalando SNAPS.\n$echo2\n"
 sudo snap install ${snaps[@]}
 sudo snap install --classic ${snaps_classic[@]}
-
-echo -e "\n$echo1\nInsalando pacotes DEB externos.\n$echo2\n"
-sudo apt install ./*.deb
 
 echo -e "\n$echo1\nInstalando Libs.\n$echo2\n"
 echo "${libs_32bits[@]}" | tr ' ' '\n' | awk '{print "lib"$1":i386"}' | tr '\n' ' '
