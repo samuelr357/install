@@ -59,6 +59,12 @@ rm -f ./install-gnome-extensions.sh
 
 cd $(mktemp -d)
 
+echo -e "\n$echo1\nAdicionando Wallpaper gdm\n$echo\n"
+wget https://raw.githubusercontent.com/samuelr357/install/main/theme/set-wallpaper-gdm
+wget https://raw.githubusercontent.com/samuelr357/install/main/theme/wall.jpg
+chmod +x set-wallpaper-gdm
+sudo ./set-wallpaper-gdm wall.jpg
+
 echo -e "\n$echo1\nOrganizando dash GNOME.\n$echo2\n"
 wget https://raw.githubusercontent.com/BenJetson/gnome-dash-fix/master/appfixer.sh
 chmod +x ./appfixer.sh
