@@ -66,6 +66,12 @@ wget https://raw.githubusercontent.com/samuelr357/install/main/theme/wall.jpg
 chmod +x ./set-gdm-wallpaper.sh
 sudo ./set-gdm-wallpaper.sh wall.jpg
 
+echo -e "\n$echo1\nInstalando tema no GRUB\n$echo1\n"
+wget https://github.com/samuelr357/install/raw/main/theme/grub.tar.xz
+tar -Jxxvf grub.tar.xz
+chmod +x install.sh
+sudo ./install.sh
+
 echo -e "\n$echo1\nOrganizando dash GNOME.\n$echo2\n"
 wget https://raw.githubusercontent.com/BenJetson/gnome-dash-fix/master/appfixer.sh
 chmod +x ./appfixer.sh
