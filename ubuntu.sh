@@ -15,7 +15,7 @@ sudo apt update --fix-missing ;
 sudo apt full-upgrade -y  ;
 
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo2\n"
-pacotes_dep=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd build-essential default-jdk libssl-dev exuberant-ctags ncurses-term  silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common )
+pacotes_dep=(curl wget  sed jq unzip chrome-gnome-shell ubuntu-restricted-extras net-tools gnome-tweak-tool git snapd build-essential default-jdk libssl-dev exuberant-ctags ncurses-term  silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common )
 pacotes_apt=(gimp vlc libreoffice grub-customizer netbeans qbittorrent enpass stacer steam insync gnome-boxes timeshift openjdk-8-jdk-headless gparted)
 pacotes_apt_recomendados=( wine-stable wine32 winetricks)
 
