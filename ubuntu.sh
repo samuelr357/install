@@ -29,6 +29,9 @@ repos=(
 )
 
 deb=("https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+"http://mirrors.edge.kernel.org/ubuntu/pool/universe/n/nodejs/libnode64_10.19.0~dfsg-3ubuntu1_amd64.deb"
+"http://archive.ubuntu.com/ubuntu/pool/main/i/icu/libicu66_66.1-2ubuntu2_amd64.deb"
+"https://github.com/rivafarabi/deckboard/releases/download/v1.9.84/deckboard_1.9.84_amd64.deb"
 )
 
 appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86_64.AppImage"
@@ -114,6 +117,7 @@ sudo apt install --install-recommends  ${pacotes_apt_recomendados[@]} -y
 echo -e "\n$echo1\nInstalando SNAPS.\n$echo2\n"
 sudo snap install ${snaps[@]}
 sudo snap install --classic ${snaps_classic[@]}
+sudo mv code_code.desktop spotify_spotify.desktop /usr/share/applications/
 
 echo -e "\n$echo1\nInstalando Libs.\n$echo2\n"
 echo "${libs_32bits[@]}" | tr ' ' '\n' | awk '{print "lib"$1":i386"}' | tr '\n' ' '
