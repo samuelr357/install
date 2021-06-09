@@ -2,12 +2,12 @@
 ##CRIADO POR SAMUEL RODRIGUES##
 ##PARA NOTEBOOK LNV SETAR NA INICIALIZAÇÃO 'amixer -c 1 sset 'Headphone' 100'.
 
-echo1=#########################################################################
+echo1="#########################################################################"
 
 echo -e "\n$echo1\nAtualizando Sistema.\n$echo1\n"
 sudo pacman -Syu --noconfirm
 
-echo -e "\n$echo1\nDefinindo dependencias.\n$echo2\n"
+echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
 pacotes=(gimp vlc libreoffice netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted)
 pacaur=(google-chrome insync enpass binance webtorrent-desktop)
