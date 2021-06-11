@@ -24,7 +24,7 @@ appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86
 
 ##################################################################################
 
-sudo pamac install webtorrent-desktop --no-confirm
+pamac install webtorrent-desktop --no-confirm
 echo -e "\n$echo1\nInstalando extenções GNOME.\n$echo1\n"
 sudo pacman -S wget curl jq unzip sed --noconfirm
 rm -f ./install-gnome-extensions.sh; wget -N -q "https://raw.githubusercontent.com/cyfrost/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh && chmod +x install-gnome-extensions.sh
