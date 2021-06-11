@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm
 
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
-pacotes=(gimp vlc libreoffice netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted)
+pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted)
 pacaur=(google-chrome insync enpass binance webtorrent-desktop)
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
@@ -61,8 +61,9 @@ echo -e "\n$echo1\nInstalando pacotes AUR.\n$echo1\n"
 sudo pamac install ${pacaur[@]} --no-confirm
 
 echo -e "\n$echo1\nInstalando pacotes Snaps.\n$echo1\n"
-systemctl restart snapd.service
+sudo systemctl restart snapd.service
 sudo snap install spotify
+sudo snap install onlyoffice-ds
 sudo snap install --classic code
 
 echo -e "\n$echo1\nBaixando e configurando APPIMAGE.\n$echo1\n"
