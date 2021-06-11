@@ -79,10 +79,11 @@ chmod +x *.AppImage
 ./appimaged-x86_64.AppImage --install
 
 ##CONFIGURAR VPN PARA INICIAR COM SISTEMA
-##echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo2\n"
+##echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo1\n"
 ##sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop > /home/samuel/.local/share/applications/nm-connection-editor.desktop 
 
-clear
+echo -e "\n$echo1"; ##echo -e "\n$echo1"
 echo -e "\n$echo1\nSISTEMA INSTALADO COM SUCESSO!!\n$echo2\n"
+echo -e "\n$echo1"; ##echo -e "\n$echo1"
 sleep 120
 exit
