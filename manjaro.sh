@@ -61,6 +61,7 @@ echo -e "\n$echo1\nInstalando pacotes AUR.\n$echo1\n"
 sudo pamac install ${pacaur[@]} --no-confirm
 
 echo -e "\n$echo1\nInstalando pacotes Snaps.\n$echo1\n"
+sudo systemctl enable --now snapd.socket
 sudo systemctl restart snapd.service
 sudo snap install spotify
 sudo snap install onlyoffice-ds
