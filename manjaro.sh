@@ -10,7 +10,7 @@ sudo pacman -Syu --noconfirm
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
 pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted)
-pacaur=(google-chrome insync enpass binance webtorrent-desktop)
+pacaur=(google-chrome insync enpass binance webtorrent-desktop onlyoffice-desktopeditors)
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
 ext=(19 1160 104 1677 7 906)
@@ -55,7 +55,7 @@ rm -f ./appfixer.sh
 echo -e "\n$echo1\nInstalando pacotes do reporitório.\n$echo1\n"
 sudo pacman -Sy --noconfirm
 sudo pacman -S ${dependencia[@]} --noconfirm
-sudo pacman -S ${pacotes[@]} --noconfirm
+sudo pamac install ${pacotes[@]} --no-confirm
 
 echo -e "\n$echo1\nInstalando pacotes AUR.\n$echo1\n"
 sudo pamac install ${pacaur[@]} --no-confirm
