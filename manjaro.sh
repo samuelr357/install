@@ -64,7 +64,7 @@ echo -e "\n$echo1\nInstalando pacotes Snaps.\n$echo1\n"
 sudo systemctl enable --now snapd.socket
 sudo systemctl restart snapd.service
 sudo snap install spotify
-sudo snap install onlyoffice-ds
+sudo snap install onlyoffice-desktopeditors
 sudo snap install --classic code
 
 echo -e "\n$echo1\nBaixando e configurando APPIMAGE.\n$echo1\n"
