@@ -78,7 +78,7 @@ wget "https://github.com/AppImage/appimaged/releases/download/continuous/appimag
 chmod +x *.AppImage
 ./appimaged-x86_64.AppImage --install
 
-sudo sed 's/NoDisplay=true//g' /usr/share/applications/gnome-session-properties.desktop
+sudo sed -i 's/NoDisplay=true//g' /usr/share/applications/gnome-session-properties.desktop
 ##CONFIGURAR VPN PARA INICIAR COM SISTEMA
 ##echo -e "\n$echo1\nMOSTRAR "Advanced Network Configuration" NO GNOME.\n$echo1\n"
 ##sudo sed '13d' /usr/share/applications/nm-connection-editor.desktop > /home/samuel/.local/share/applications/nm-connection-editor.desktop 
