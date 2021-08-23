@@ -13,7 +13,7 @@ pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gpart
 pacaur=(google-chrome insync enpass binance onlyoffice-desktopeditors)
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
-ext=(19 1160 104 1677 7 906)
+ext=(19 1160 104 1677 7 906 1503)
 
 appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86_64.AppImage"
 "https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-ia32.AppImage"
