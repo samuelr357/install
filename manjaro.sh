@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm
 
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
-pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted nautilus-share gnome-session-properties manjaro-settings-samba)
+pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted nautilus-share gnome-session-properties manjaro-settings-samba libpamac-flatpak-plugin)
 pacaur=(google-chrome insync enpass binance onlyoffice-desktopeditors)
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
