@@ -9,8 +9,9 @@ sudo pacman -Syu --noconfirm
 
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
-pacotes=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted nautilus-share gnome-session-properties manjaro-settings-samba libpamac-flatpak-plugin)
+pamac=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted nautilus-share gnome-session-properties manjaro-settings-samba flatpak libpamac-flatpak-plugin)
 pacaur=(google-chrome insync enpass binance onlyoffice-desktopeditors)
+flatpak=(junction blanket)
 
 ##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
 ext=(19 1160 104 1677 7 906 1503)
@@ -56,10 +57,14 @@ rm -f ./appfixer.sh
 echo -e "\n$echo1\nInstalando pacotes do reporitório.\n$echo1\n"
 sudo pacman -Sy --noconfirm
 sudo pacman -S ${dependencia[@]} --noconfirm
-sudo pamac install ${pacotes[@]} --no-confirm
+sudo pamac install ${pamac[@]} --no-confirm
 
 echo -e "\n$echo1\nInstalando pacotes AUR.\n$echo1\n"
 sudo pamac install ${pacaur[@]} --no-confirm
+
+echo -e "\n$echo1\nInstalando pacotes FlatPak.\n$echo1\n"
+sudo flatpak install ${flatpak[@]} -y
+
 
 echo -e "\n$echo1\nInstalando pacotes Snaps.\n$echo1\n"
 sudo systemctl enable --now snapd.socket
