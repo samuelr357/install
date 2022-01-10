@@ -10,11 +10,11 @@ sudo pacman -Syu --noconfirm
 echo -e "\n$echo1\nDefinindo dependencias.\n$echo1\n"
 dependencia=(curl wget  sed jq unzip chrome-gnome-shell net-tools gnome-tweak-tool git snapd)
 pamac=(gimp vlc netbeans qbittorrent enpass stacer gnome-boxes timeshift gparted nautilus-share gnome-session-properties manjaro-settings-samba flatpak libpamac-flatpak-plugin)
-pacaur=(google-chrome insync enpass binance onlyoffice-desktopeditors)
+pacaur=(google-chrome insync enpass binance onlyoffice-desktopeditors brave)
 flatpak=(junction blanket)
 
-##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO
-ext=(19 1160 104 1677 7 906 1503)
+##EXTENCOES GNOME - ADICIONAR NUMERO REFERENTE AO PROJETO  https://extensions.gnome.org/extension/"NUMBER"/projectname/
+ext=(19 1160 104 1677 7 906 1503 4236)
 
 appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86_64.AppImage"
 "https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-ia32.AppImage"
