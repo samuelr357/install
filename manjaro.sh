@@ -20,10 +20,16 @@ appimg=("https://github.com/X0rg/CPU-X/releases/download/v4.0.1/CPU-X-v4.0.1-x86
 "https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-ia32.AppImage"
 "https://github.com/kefir500/apk-editor-studio/releases/download/v1.4.0/apk-editor-studio_linux_1.4.0.AppImage"
 "https://github.com/GitSquared/edex-ui/releases/download/v2.2.4/eDEX-UI-Linux-x86_64.AppImage"
+"https://github.com/prateekmedia/appimagepool/releases/download/4.9.9/appimagepool-x86_64.AppImage"
 )
 
 
 ##################################################################################
+echo -e "\n$echo1\nHabilitando pacoter AUR\n$echo1\n"
+sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf 
+
+echo -e "\n$echo1\nHabilitando Downloads paralelos\n$echo1\n"
+sudo sed -Ei '/ParallelDownload/s/^#//' /etc/pacman.conf
 
 pamac install webtorrent-desktop --no-confirm
 echo -e "\n$echo1\nInstalando extenções GNOME.\n$echo1\n"
@@ -63,12 +69,14 @@ echo -e "\n$echo1\nInstalando pacotes AUR.\n$echo1\n"
 sudo pamac install ${pacaur[@]} --no-confirm
 
 echo -e "\n$echo1\nInstalando pacotes FlatPak.\n$echo1\n"
+sudo sed -Ei '/EnableFlatpak/s/^#//' /etc/pamac.conf
 sudo flatpak install ${flatpak[@]} -y
 
 
 echo -e "\n$echo1\nInstalando pacotes Snaps.\n$echo1\n"
 sudo systemctl enable --now snapd.socket
 sudo systemctl restart snapd.service
+sudo sed -Ei '/EnableSnap/s/^#//' /etc/pamac.conf
 sudo snap install spotify
 sudo snap install onlyoffice-desktopeditors
 sudo snap install --classic code
