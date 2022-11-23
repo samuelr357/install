@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/type</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/type</applyto>
+      <type>string</type>
+      <default>Action</default>
+      <locale name="C">
+        <short>Tipo do item</short>
+        <long>Define se o item é uma ação ou um menu. Valores possíveis são:
+- "Action",
+- "Menu".
+O valor diferencia maiúsculas de minúsculas e não deve ser traduzido.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/iversion</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/iversion</applyto>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Versão do formato</short>
+        <long>A versão do formato da configuração que será usada para controlar a compatibilidade reversa.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/items</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/items</applyto>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[profile-zero]</default>
+      <locale name="C">
+        <short>Lista de ids de subitem</short>
+        <long>Lista ordenada das IDs dos subitens. Pode ser ações ou menus se o item é um menu, ou perfis caso o item seja uma ação.
+Se essa lista não existe ou está vazia para uma ação ou um menu, subitens são anexados na ordem das operações de leitura.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/label</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/label</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Video Downloader</default>
+        <short>O nome do item de menu de contexto (obrigatório)</short>
+        <long>A etiqueta do item do menu que aparecerá no menu de contexto do gerenciador de arquivos quando a seleção corresponder com as preferências de condições de aparecimento.
+É também usado como padrão para a etiqueta de uma barra de ferramentas de uma ação.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/target-location</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/target-location</applyto>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Direciona-se para a seleção do menu de contexto</short>
+        <long>Se a ação direciona-se para os menus de contexto do gerenciador de menus quando não há seleção, assim aplicando-se à localização atual.
+Note que menus são sempre candidatos potenciais para a exibição na seleção de menus de contexto, previsto que eles contêm pelo menos uma ação.
+Padrão como FALSE</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/toolbar-label</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/toolbar-label</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Video Downloader</default>
+        <short>O nome do item da barra de ferramentas</short>
+        <long>A etiqueta exibida além do ícone na barra de ferramentas do gerenciador de arquivos.
+Note que a exibição atual pode depender das suas preferências de seu ambiente de trabalho.
+Padrão para etiqueta do menu de contexto quando não definida ou vazia.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/desc-name</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/profile-zero/desc-name</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Video Downloader</default>
+        <short>Nome do perfil</short>
+        <long>Pode ser usado como uma descrição para a função do perfil.
+Se não estiver definido, é padronizado para um nome auto-gerado.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/path</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/profile-zero/path</applyto>
+      <type>string</type>
+      <default>/bin/VideoDownloader.sh</default>
+      <locale name="C">
+        <short>Caminho do comando</short>
+        <long>O caminho do comando a ser executado quando o usuário selecionar o item do menu no menu de contexto do gerenciador de arquivos ou na barra de ferramentas.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/working-dir</key>
+      <applyto>/apps/nautilus-actions/configurations/233b084f-b6a3-4f1b-a945-d016190cfc40/profile-zero/working-dir</applyto>
+      <type>string</type>
+      <default>%f</default>
+      <locale name="C">
+        <short>Diretório de trabalho</short>
+        <long>O comando de diretório de trabalho que será iniciado.
+O padrão é "%d".</long>
+      </locale>
+      <owner>f
